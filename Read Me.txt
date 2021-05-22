@@ -1,0 +1,55 @@
+Read Me.txt
+
+We have designed a ChatBot to help find Restaurants in Tier-1 & Tier-2 cities of India.
+Basically, A user has to provide his/her desired location and preferred cuisine with their 
+average 2 people budget to get the Top 5 restaurants in decreasing order of user ratings.
+Also these details can be emailed which shows top 10 results.
+Our Chatbot is trained on various intent and entities using the file data/nlu.md
+
+Intents:
+- Greet
+- Restaurant Search
+- Send Email
+- Affirm
+- Deny
+- Goodbye
+
+Entites:
+- location
+- cuisine
+- email
+- supported_location
+- unsupported_location
+- unknown_location
+- min_budget
+- max_budget
+
+To get the list of supported and unsupported, we created a python program(CitiesList.ipynb)
+We are using a lookup for 
+- supported_cities
+- unsupported_cities
+
+Unknown Cities are identied through an action(action_check_location)
+It flags all cities not belonging to supported and unsupported as "Unknown Cities"
+
+Synonyms have been added for major cities
+Regex for email and Affirmation has been created
+
+Current Cuisines Available are:
+Chinese
+Mexican
+Italian
+American
+Thai
+South Indian
+North Indian
+
+Average Budget for 2 people has 3 categories available:
+Lesser than Rs. 300
+Rs. 300 to 700
+More than 700
+
+A total of 25 Stories have been created to cover all the cases
+
+The Chatbot has been deployed to Slack
+Video Url: https://youtu.be/I0fUXei2kRk
